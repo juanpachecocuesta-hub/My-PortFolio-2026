@@ -1,0 +1,144 @@
+---
+import { Image } from "astro:assets";
+import Designer from "../assets/Designer.png";
+---
+
+<section class="hero-section">
+  <div class="hero-container">
+    <div class="hero-sec-1">
+      <p class="welcome">Welcome to my portfolio</p>
+
+      <h1>Hi, I'm</h1>
+      <span class="highlight">Juan Camilo</span>
+
+      <p class="text">
+        I'm a curious mind passionate about programming, calisthenics and
+        football. I believe in constant improvement, discipline and building
+        things that matter.
+      </p>
+
+      <div class="btns">
+        <button class="btn btn-primary">View Projects</button>
+        <button class="btn btn-secondary">About Me</button>
+      </div>
+    </div>
+
+    <div class="hero-sec-2">
+      <Image src={Designer} alt="Designer" />
+    </div>
+  </div>
+</section>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+  :root {
+    --bg: #171815;
+    --surface: #22231f;
+    --cream: #eee7d9;
+    --muted: #aaa99f;
+    --green: #a8b99f;
+    --border: rgba(238, 231, 217, 0.14);
+     --green2: #99af8d;
+  }
+
+  .hero-section {
+    background-color: var(--bg);
+    color: var(--cream);
+    padding: 3rem 2.9rem;
+    height: 73vh;
+  }
+
+  .hero-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hero-sec-1 {
+    max-width: 490px;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .welcome {
+    color: var(--green);
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+    color: var(--cream);
+    margin: 0;
+  }
+
+  .highlight {
+    font-size: 4.5rem;
+    color: var(--cream);
+    font-weight: 700;
+  }
+
+  .text {
+    font-size: 1rem;
+    font-family:
+      Dm Sans,
+      sans-serif;
+    font-weight: 400;
+    color: var(--muted);
+    margin-top: 1rem;
+    line-height: 1.6;
+  }
+  img {
+    width: 430px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .btns {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .btn {
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--green);
+    color: var(--bg);
+    font-family:
+      DM Sans,
+      sans-serif;
+    font-weight: 600;
+  }
+
+
+   .btn-primary{
+    transition: all 0.4s ease;
+   }
+  .btn-secondary {
+    background-color: transparent;
+    border: 1.2px solid var(--green);
+    color: var(--green);
+    font-family:
+      DM Sans,
+      sans-serif;
+      transition: all 0.4s ease;
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--green);
+    color: var(--bg);
+    cursor:pointer;
+  }
+
+  .btn-primary:hover{
+    background-color: var(--green2);
+    cursor:pointer;
+    transform: translateY(-2px);
+  }
+
+  .hero-sec-2{
+    margin-top: 40px;
+  }
+</style>
